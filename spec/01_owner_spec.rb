@@ -39,6 +39,12 @@ describe Owner do
 
     it ".all returns all instances of Owner that have been created" do
       expect(Owner.all).to include(@owner)
+    end
+
+    it ".count returns the number of owners that have been created" do
+      expect(Owner.count).to eq(7)
+
+      Owner.new("Melanie")
       Owner.new("Ginger")
       expect(Owner.count).to eq(9)
     end
